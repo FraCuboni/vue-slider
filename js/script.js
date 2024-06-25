@@ -38,5 +38,12 @@ createApp({
     },
     methods: {
         // functions
+        nextButton(){
+            this.selectedSlide = this.selectedSlide + 1
+        },
+        
+        prevButton(){
+            this.selectedSlide = this.selectedSlide - 1
+        }
     }
 }).mount('#app');
