@@ -33,17 +33,25 @@ createApp({
                 }
             ],
 
-            selectedSlide : 1
+            selectedSlide : 0
         };
     },
     methods: {
         // functions
         nextButton(){
-            this.selectedSlide = this.selectedSlide + 1
+            if(this.selectedSlide < this.slides.length - 1){        
+                this.selectedSlide = this.selectedSlide + 1
+            }else{
+                this.selectedSlide = 0
+            }
         },
         
         prevButton(){
-            this.selectedSlide = this.selectedSlide - 1
+            if(this.selectedSlide > 0){        
+                this.selectedSlide = this.selectedSlide - 1
+            }else{
+                this.selectedSlide = this.slides.length - 1
+            }
         }
     }
 }).mount('#app');
